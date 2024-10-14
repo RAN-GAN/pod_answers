@@ -1,0 +1,158 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #f0f0f0; /* Light text for contrast */
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #1c1c1c; /* Slightly lighter dark for header */
+    color: #f0f0f0;
+    text-align: center;
+    padding: 1.5rem 0; /* Added padding for better look */
+    position: relative; /* Positioning for the navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+/* Navigation Links */
+nav {
+    position: absolute; /* Absolute positioning for navbar */
+    top: 1rem; /* Positioning */
+    right: 1rem; /* Positioning */
+}
+
+nav a {
+    color: #f0f0f0;
+    text-decoration: none;
+    margin-left: 20px; /* Space between links */
+    transition: color 0.3s; /* Transition effect */
+}
+
+nav a:hover {
+    color: #ffcc00; /* Gold color on hover */
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Question Cards */
+.question-card {
+    background-color: #1c1c1c; /* Dark card background */
+    padding: 20px;
+    margin: 20px 0; /* Margin around the card */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Strong shadow for depth */
+    max-width: 800px; /* Maximum width for the card */
+    min-width: 300px;
+    width: 100%; /* Full width for smaller screens */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
+}
+
+.question-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Stronger shadow on hover */
+}
+
+.question-card h2 {
+    color: #ffcc00; /* Gold color for titles */
+    margin-bottom: 10px;
+    font-size: 1.5rem; /* Slightly larger font */
+}
+
+.question-card h3 {
+    color: #ccc; /* Lighter color for subheading */
+    font-size: 1.2rem; /* Slightly larger font */
+}
+
+/* Code Block */
+pre {
+    background-color: #292929; /* Darker background for code */
+    padding: 15px;
+    border-left: 4px solid #ffcc00; /* Gold accent line */
+    overflow-x: auto;
+    border-radius: 5px;
+}
+
+/* Button */
+button {
+    background-color: #ffcc00; /* Gold color for buttons */
+    color: #121212; /* Dark text for contrast */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Transition for button */
+    margin-top: 10px; /* Space above button */
+}
+
+button:hover {
+    background-color: #e6b800; /* Darker gold on hover */
+    transform: scale(1.05); /* Slight scaling on hover */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #1c1c1c; /* Dark footer background */
+    color: #f0f0f0;
+    padding: 15px 0;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px; /* Limit width for better appearance */
+}
+
+input, textarea {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%; /* Full width */
+    border: 1px solid #444; /* Dark border */
+    border-radius: 5px; /* Rounded borders */
+    transition: border 0.3s; /* Transition for border */
+    background-color: #2b2b2b; /* Dark background for inputs */
+    color: #f0f0f0; /* Light text color */
+}
+
+input:focus, textarea:focus {
+    border: 1px solid #ffcc00; /* Highlight border on focus */
+    outline: none; /* Remove outline */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+    
+    .container {
+        padding: 10px; /* Reduced padding */
+    }
+
+    .question-card {
+        margin: 10px 0; /* Adjust margin */
+        padding: 15px; /* Adjust padding */
+    }
+
+    button {
+        width: 100%; /* Full width buttons on mobile */
+    }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Code Answer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Add Code Answer</h1>
+        <nav>
+            <a href="/">Back to Code Solutions</a>
+        </nav>
+    </header>
+
+    <section class="container">
+        <form method="POST" action="/add_answer">
+            <label for="language">Language:</label>
+            <input type="text" id="language" name="language" required>
+
+            <label for="code">Code:</label>
+            <textarea id="code" name="code" required></textarea>
+
+            <button type="submit">Add Answer</button>
+        </form>
+
+        <h2>Answers for Question 1</h2>
+        <ul>
+            {% for item in questions_and_answers %}
+            <li>
+                <strong>Language:</strong> {{ item.language }} <br>
+                <pre><code>{{ item.code }}</code></pre>
+                <form method="POST" action="/remove_answer/{{ loop.index }}">
+                    <button type="submit">Remove</button>
+                </form>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <footer>
+        <p>Developed by [Your Name]</p>
+    </footer>
+</body>
+</html>
